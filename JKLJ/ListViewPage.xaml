@@ -4,12 +4,7 @@
              x:Class="JKLJ.ListViewPage">
     <ContentPage.Content>
         <ListView>
-            <ListView.Header>
-                <StackLayout>
-                    <Label>Zapisane Informacje</Label>
-                </StackLayout>
-            </ListView.Header>
-            <ListView.ItemTemplate x:Name="listViewBMI" rowHeight="300">
+            <ListView.ItemTemplate >
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
