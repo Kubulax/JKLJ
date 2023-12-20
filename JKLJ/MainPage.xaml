@@ -9,7 +9,9 @@
                      />
         </ContentPage.ToolbarItems>
 
-    <StackLayout Margin="50">
+    <ContentPage.Content>
+
+        <StackLayout Margin="50">
         <Label Text="Płeć: " FontSize="25" FontAttributes="Bold"/>
         <Grid RadioButtonGroup.GroupName="gender">
             <Grid.RowDefinitions>
