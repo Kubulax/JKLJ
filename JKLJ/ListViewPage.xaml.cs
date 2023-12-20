@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,14 +24,14 @@ namespace JKLJ
 
         public void Load()
         {
-            string path = App.DdPath;
+            string path = App.Dbpath;
 
             if(File.Exists(path))
             {
                 string text = File.ReadAllText(path);
 
-                
-                List<BMIResult> results = JsonDecompiler<List<BMIResult>>(text);
+
+                List<BMIResult> results = JsonConvert.DeserializeObject<List<BMIResult>>(text);
 
                 listViewBMI.ItemsSource = results;
             }
