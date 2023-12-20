@@ -7,7 +7,7 @@ namespace JKLJ
 {
     public partial class App : Application
     {
-        public static string DdPath
+        public static string DbPath
         {
             get
             {
@@ -18,7 +18,7 @@ namespace JKLJ
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
