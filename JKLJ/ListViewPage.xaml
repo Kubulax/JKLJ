@@ -9,7 +9,7 @@
                     <Label>Zapisane Informacje</Label>
                 </StackLayout>
             </ListView.Header>
-            <ListView.ItemTemplate x:Name="ListViewBMI" rowHeight="300">
+            <ListView.ItemTemplate x:Name="listViewBMI" rowHeight="300">
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout>
@@ -27,6 +27,7 @@
                             <Label Text="{Binding Gender}"/>
                             <Label Text="Typ:"/>
                             <Label Text="{Binding Result}"/>
+                            <Line HeightRequest="5" BackgroundColor="Black"/>
 
                         </StackLayout>
                     </ViewCell>

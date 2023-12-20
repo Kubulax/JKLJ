@@ -20,6 +20,7 @@ namespace JKLJ
             Load();
         }
 
+
         public void Load()
         {
             string path = App.DdPath;
@@ -27,6 +28,11 @@ namespace JKLJ
             if(File.Exists(path))
             {
                 string text = File.ReadAllText(path);
+
+                
+                List<BMIResult> results = JsonDecompiler<List<BMIResult>>(text);
+
+                listViewBMI.ItemsSource = results;
             }
         }
     }
