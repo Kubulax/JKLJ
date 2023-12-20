@@ -94,7 +94,7 @@ namespace JKLJ
                 await DisplayAlert("Błąd", "Podaj tytuł zapisu.", "OK");
                 return;
             }
-            string path = App.Dbpath;
+            string path = App.DbPath;
             string file = File.ReadAllText(path);
             List<BMIResult> resultList = JsonConvert.DeserializeObject<List<BMIResult>>(file);
 
@@ -103,7 +103,7 @@ namespace JKLJ
                 resultList[resultList.Count - 1].SetLastId();
             }
 
-            resultList.Add(new BMIResult(title, DateTime.Now, label_gender_invisible.Text, int.Parse(entry_height.Text), int.Parse(entry_weight.Text), double.Parse(label_score_invisible.Text), label_result_invisible.Text));
+            resultList.Add(new BMIResult(title, DateTime.Now, int.Parse(entry_weight.Text), int.Parse(entry_height.Text), label_gender_invisible.Text , float.Parse(label_score_invisible.Text), label_result_invisible.Text));
 
             string serializedResultList = JsonConvert.SerializeObject(resultList);
             File.WriteAllText(path, serializedResultList);
