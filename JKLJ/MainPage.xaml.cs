@@ -116,7 +116,7 @@ namespace JKLJ
 
         private void GoToList(object sender, EventArgs e)
         {
-            //Navigation.PushAsync(new ListPage());
+            Navigation.PushAsync(new ListViewPage());
         }
 
     }
