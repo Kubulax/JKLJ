@@ -7,7 +7,7 @@ namespace JKLJ
 {
     public partial class App : Application
     {
-        private static string DdPath
+        public static string DbPath
         {
             get
             {
