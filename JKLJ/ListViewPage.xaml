@@ -21,12 +21,12 @@
                             <Label Text="{Binding Height}"/>
                             <Label Text="Waga:"/>
                             <Label Text="{Binding Weight}"/>
-                            <Label Text="Tytuł:"/>
-                            <Label Text="{Binding Title}"/>
-                            <Label Text="Tytuł:"/>
-                            <Label Text="{Binding Title}"/>
-                            <Label Text="Tytuł:"/>
-                            <Label Text="{Binding Title}"/>
+                            <Label Text="Wynik:"/>
+                            <Label Text="{Binding Score}"/>
+                            <Label Text="Plec:"/>
+                            <Label Text="{Binding Gender}"/>
+                            <Label Text="Typ:"/>
+                            <Label Text="{Binding Result}"/>
 
                         </StackLayout>
                     </ViewCell>

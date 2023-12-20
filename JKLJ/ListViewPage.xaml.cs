@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,18 @@ namespace JKLJ
         public ListViewPage()
         {
             InitializeComponent();
+
+            Load();
+        }
+
+        public void Load()
+        {
+            string path = App.DdPath;
+
+            if(File.Exists(path))
+            {
+                string text = File.ReadAllText(path);
+            }
         }
     }
 }
