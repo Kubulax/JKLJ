@@ -24,7 +24,7 @@ namespace JKLJ
 
         public void Load()
         {
-            string path = App.Dbpath;
+            string path = App.DdPath;
 
             if(File.Exists(path))
             {
