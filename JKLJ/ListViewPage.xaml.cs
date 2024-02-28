@@ -36,5 +36,15 @@ namespace JKLJ
                 listViewBMI.ItemsSource = results;
             }
         }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            string path = App.DbPath;
+
+            if (File.Exists(path))
+            {
+                string text = File.ReadAllText(path);
+            }
+        }
     }
 }

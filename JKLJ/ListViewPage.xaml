@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JKLJ.ListViewPage">
     <ContentPage.Content>
-        <ListView x:Name="listViewBMI" RowHeight="380">
+        <ListView x:Name="listViewBMI" RowHeight="400">
             <ListView.ItemTemplate >
                 <DataTemplate>
                     <ViewCell>
@@ -22,8 +22,8 @@
                             <Label HorizontalTextAlignment="Center" Text="{Binding Gender}"/>
                             <Label HorizontalTextAlignment="Center" Text="Typ:"/>
                             <Label HorizontalTextAlignment="Center" Text="{Binding Result}"/>
-                            
 
+                            <Button Text="Usun" Clicked="Button_Clicked"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
