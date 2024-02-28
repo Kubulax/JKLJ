@@ -3,26 +3,26 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JKLJ.ListViewPage">
     <ContentPage.Content>
-        <ListView x:Name="listViewBMI" RowHeight="400">
+        <ListView x:Name="listViewBMI" RowHeight="380">
             <ListView.ItemTemplate >
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout>
-                            <Label Text="Tytuł:"/>
-                            <Label Text="{Binding Title}"/>
-                            <Label Text="Date:"/>
-                            <Label Text="{Binding Date}"/>
-                            <Label Text="Wysokosc:"/>
-                            <Label Text="{Binding Height}"/>
-                            <Label Text="Waga:"/>
-                            <Label Text="{Binding Weight}"/>
-                            <Label Text="Wynik:"/>
-                            <Label Text="{Binding Score}"/>
-                            <Label Text="Plec:"/>
-                            <Label Text="{Binding Gender}"/>
-                            <Label Text="Typ:"/>
-                            <Label Text="{Binding Result}"/>
-                            <Line HeightRequest="5" BackgroundColor="Black"/>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label HorizontalTextAlignment="Center" Text="Tytuł:"/>
+                            <Label HorizontalTextAlignment="Center" Text="{Binding Title}"/>
+                            <Label HorizontalTextAlignment="Center" Text="Date:"/>
+                            <Label HorizontalTextAlignment="Center" Text="{Binding Date}"/>
+                            <Label HorizontalTextAlignment="Center" Text="Wysokosc:"/>
+                            <Label HorizontalTextAlignment="Center" Text="{Binding Height}"/>
+                            <Label HorizontalTextAlignment="Center" Text="Waga:"/>
+                            <Label HorizontalTextAlignment="Center" Text="{Binding Weight}"/>
+                            <Label HorizontalTextAlignment="Center" Text="Wynik:"/>
+                            <Label  HorizontalTextAlignment="Center" Text="{Binding Score}"/>
+                            <Label HorizontalTextAlignment="Center" Text="Plec:"/>
+                            <Label HorizontalTextAlignment="Center" Text="{Binding Gender}"/>
+                            <Label HorizontalTextAlignment="Center" Text="Typ:"/>
+                            <Label HorizontalTextAlignment="Center" Text="{Binding Result}"/>
+                            
 
                         </StackLayout>
                     </ViewCell>
