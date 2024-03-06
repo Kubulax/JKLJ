@@ -23,7 +23,7 @@
                             <Label HorizontalTextAlignment="Center" Text="Typ:"/>
                             <Label HorizontalTextAlignment="Center" Text="{Binding Result}"/>
 
-                            <Button Text="Usun" Clicked="Button_Clicked"/>
+                            <Button Text="Usun" Clicked="Delete_btn"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

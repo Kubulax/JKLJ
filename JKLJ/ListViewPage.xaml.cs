@@ -37,7 +37,7 @@ namespace JKLJ
             }
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private void Delete_btn(object sender, EventArgs e)
         {
             string path = App.DbPath;
 
