@@ -53,7 +53,7 @@ namespace JKLJ
 
             if (selectedItem == null)
             {
-                DisplayAlert("Error", "Please select an item to delete.", "OK");
+                DisplayAlert("Błąd", "Prosze wybrac dane.", "OK");
                 return;
             }
 
@@ -63,7 +63,7 @@ namespace JKLJ
 
             File.WriteAllText(path, updatedJson);
 
-            DisplayAlert("Success", "Item has been deleted from the JSON file.", "OK");
+            DisplayAlert("Sukces", "Usunieto.", "OK");
         }
     }
 }
