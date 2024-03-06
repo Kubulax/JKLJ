@@ -17,7 +17,7 @@ namespace JKLJ
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ListViewPage : ContentPage
     {
-        private ObservableCollection<string> itemList = new ObservableCollection<string>();
+        private ObservableCollection<BMIResult> resultList = new ObservableCollection<BMIResult>();
 
         public ListViewPage()
         {
@@ -26,43 +26,30 @@ namespace JKLJ
             Load();
         }
 
-
         public void Load()
-        {
-            string path = App.DbPath;
-
-            if(File.Exists(path))
-            {
-                string text = File.ReadAllText(path);
-
-
-                List<BMIResult> results = JsonConvert.DeserializeObject<List<BMIResult>>(text);
-
-                listViewBMI.ItemsSource = results;
-
-                foreach (var item in results)
-                {
-                    itemList.Add(item.ToString());
-                }
-
-            }
-
-
-            
-
-            
-        }
-
-        private void Delete_btn(object sender, EventArgs e)
         {
             string path = App.DbPath;
 
             if (File.Exists(path))
             {
                 string text = File.ReadAllText(path);
+
+                resultList = JsonConvert.DeserializeObject<ObservableCollection<BMIResult>>(text);
+                listViewBMI.ItemsSource = resultList;
+            }
+        }
+
+        private void Delete_btn(object sender, EventArgs e)
+        {
+            string path = App.DbPath;
+
+            if (!File.Exists(path))
+            {
+                DisplayAlert("Error", "JSON file not found.", "OK");
+                return;
             }
 
-            string selectedItem = (string)listViewBMI.SelectedItem;
+            BMIResult selectedItem = (BMIResult)listViewBMI.SelectedItem;
 
             if (selectedItem == null)
             {
@@ -70,25 +57,13 @@ namespace JKLJ
                 return;
             }
 
-            
-            itemList.Remove(selectedItem);
+            resultList.Remove(selectedItem);
 
-            
-            JArray jsonArray = new JArray();
-            foreach (var item in itemList)
-            {
-                jsonArray.Add(item);
-            }
+            string updatedJson = JsonConvert.SerializeObject(resultList);
 
-            
-            string updatedJson = jsonArray.ToString();
-
-           
-            
             File.WriteAllText(path, updatedJson);
 
             DisplayAlert("Success", "Item has been deleted from the JSON file.", "OK");
-
         }
     }
 }

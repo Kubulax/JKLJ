@@ -3,7 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="JKLJ.ListViewPage">
     <ContentPage.Content>
-        <ListView x:Name="listViewBMI" RowHeight="400">
+        <StackLayout>
+            <Button Text="Usun" Clicked="Delete_btn"/>
+       
+        <ListView x:Name="listViewBMI" RowHeight="400" SelectionMode="Single">
+            
             <ListView.ItemTemplate >
                 <DataTemplate>
                     <ViewCell>
@@ -23,11 +27,12 @@
                             <Label HorizontalTextAlignment="Center" Text="Typ:"/>
                             <Label HorizontalTextAlignment="Center" Text="{Binding Result}"/>
 
-                            <Button Text="Usun" Clicked="Delete_btn"/>
+                            
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
